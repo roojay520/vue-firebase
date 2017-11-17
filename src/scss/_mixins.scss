@@ -1,0 +1,35 @@
+// 倒三角生成
+@mixin trag($size: 5px) {
+    display: inline-block;
+
+    border-top: $size solid;
+    border-right: $size solid transparent;
+    border-left: $size solid transparent;
+
+    vertical-align: middle;
+}
+// 全屏居中
+@mixin center($width: 80%, $height: 80%) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: $width;
+    height: $height;
+    padding: 16px;
+    margin: auto;
+}
+
+%hover {
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    box-shadow: 0 1px 6px rgba(32, 33, 36, .28);
+
+    color: $red;
+
+    cursor: pointer;
+}
+
+

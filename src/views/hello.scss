@@ -1,0 +1,108 @@
+.hello {
+    @import "~@/scss/index";
+
+    @include center;
+    box-shadow: $shadow_bg;
+    margin-top: 60px;
+    overflow: auto;
+
+    font-family: "Avenir", Helvetica, Arial, sans-serif;
+    // text-align: center;
+
+    color: $red;
+    background: $white;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    .btn {
+      padding: 6px 12px;
+      border: 0 none;
+      border-color: $gray;
+      border-radius: 4px;
+      outline: none; // 去掉选中时的蓝色边框
+      background-color: $white;
+      box-shadow: $shadow_btn;
+
+      overflow: hidden;
+      vertical-align: middle;
+      font-size: 14px;
+      line-height: 1.4;
+      white-space: nowrap;
+      text-align: center;
+
+      cursor: pointer; // 抓手样式
+
+      transform: box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1);
+      .icon {
+        @include trag(5px);
+
+        margin-left: 4px;
+      }
+      &:hover {
+        @extend %hover;
+      }
+      &:disabled {
+        color: graytext;
+        cursor: auto;
+        box-shadow: none;
+        background: #f8f8f8;
+        &:hover {
+          box-shadow: none;
+        }
+      }
+    }
+    .drop-menu {
+    //   position: relative;
+      height: 60%;
+      margin-top: 8px;
+      .card{
+          display: flex;
+          flex-direction: row;
+        //   justify-content: space-around;
+          height: 80%;
+        .list {
+            // position: absolute;
+
+            // display: none;
+            list-style: none;
+
+            max-height: 80%;
+            width: 20%;
+            padding: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            border-radius: 4px;
+            // margin: 8px auto;
+            background-color: $white;
+            box-shadow: $shadow_list;
+
+            overflow: auto;
+            overflow: -moz-scrollbars-vertical; // firefox 隐藏横向滚动条
+            text-align: left;
+
+            z-index: 9999;
+            &::-webkit-scrollbar {
+              // chrome 隐藏滚动条
+              display: none;
+            }
+            li {
+              padding: 4px;
+              margin: 4px;
+              color: $black;
+              white-space: wrap;
+              text-decoration: none;
+              &:hover {
+                @extend %hover;
+              }
+            }
+          }
+      }
+    //   .open {
+    //     display: block;
+    //   }
+    .address {
+        color: $black;
+        font-size: 1.2em;
+    }
+    }
+  }

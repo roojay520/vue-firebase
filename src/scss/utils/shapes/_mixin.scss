@@ -1,0 +1,95 @@
+@charset "UTF-8";
+@import "colors.scss";
+$color: $red !default;
+// 正方形
+@mixin square($size $color) {
+    width: $size;
+
+    background-color: $color;
+}
+
+// 长方形
+@mixin rectangle($size, $color) {
+    width: $size;
+    height: $size/2;
+
+    background-color: $color;
+}
+
+// 圆
+@mixin circle($size, $color) {
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+
+    background-color: $color;
+}
+
+// 椭圆
+@mixin oval($size, $color) {
+    width: $size;
+    height: $size/2;
+    border-radius: 50%;
+
+    background-color: $color;
+}
+
+%triangle {
+    width: 0;
+    height: 0;
+}
+
+// 正三角
+@mixin triangle_up($size, $color) {
+    @extend %triangle;
+
+    border-right: $size/2 solid transparent;
+    border-bottom: $size;
+    border-left: $size/2 solid transparent;
+
+    background-color: $color;
+}
+
+// 倒三角
+@mixin triangle_down($size, $color) {
+    @extend %triangle;
+
+    border-top: $size;
+    border-right: $size/2 solid transparent;
+    border-left: $size/2 solid transparent;
+
+    background-color: $color;
+}
+
+// 左三角
+@mixin triangle_left($size, $color) {
+    @extend %triangle;
+
+    border-top: $size/2 solid transparent;
+    border-right: $size;
+    border-left: $size/2 solid transparent;
+
+    background-color: $color;
+}
+
+// 右三角
+@mixin triangle_right($size, $color) {
+    @extend %triangle;
+
+    border-top: $size/2 solid transparent;
+    border-right: $size/2 solid transparent;
+    border-left: $size;
+
+    background-color: $color;
+}
+
+// 右上角
+@mixin triangle_top_left($size, $color) {
+    @extend %triangle;
+
+    border-top: $size/2 solid transparent;
+    border-right: $height solid transparent;
+    border-left: $size;
+
+    background-color: $color;
+}
