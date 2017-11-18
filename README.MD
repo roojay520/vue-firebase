@@ -1,4 +1,4 @@
-## vue + firebase
+## vue + firebase 模拟实现地址选择四级联动
 
 使用 vue + firebase 完成一个简单的地址选择器, 使用 webpack 打包生成.
 
@@ -46,5 +46,7 @@ firebase: {
 ![gif](https://i.loli.net/2017/11/18/5a0f0ff5c6cdb.gif)
 
 查看:
+
 `$ npm i`
+
 `$ npm run dev `
